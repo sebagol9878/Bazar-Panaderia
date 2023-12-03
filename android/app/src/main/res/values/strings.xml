@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">proyecto_panaderia</string>
+    <string name="title_activity_main">proyecto_panaderia</string>
+    <string name="package_name">proyecto.panaderia.app</string>
+    <string name="custom_url_scheme">proyecto.panaderia.app</string>
+</resources>

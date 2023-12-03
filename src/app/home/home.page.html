@@ -1,0 +1,102 @@
+<ion-app>
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Hola, {{ username }} le saluda Bazar RadaL</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="cart" slot="start"></ion-icon>
+          <ion-label>Pedidos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="settings" slot="start"></ion-icon>
+          <ion-label>Configuración</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="mail" slot="start"></ion-icon>
+          <ion-label>Contactanos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="list" slot="start"></ion-icon>
+          <ion-label>Nuestros Productos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="pricetag" slot="start"></ion-icon>
+          <ion-label>Promociones</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="person" slot="start"></ion-icon>
+          <ion-label>Mi Cuenta</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="cart" slot="start"></ion-icon>
+          <ion-label>Carrito de Compras</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="newspaper" slot="start"></ion-icon>
+          <ion-label>Blog</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="information-circle" slot="start"></ion-icon>
+          <ion-label>Acerca de Nosotros</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="help-circle" slot="start"></ion-icon>
+          <ion-label>Soporte</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="globe" slot="start"></ion-icon>
+          <ion-label>Idioma</ion-label>
+        </ion-item>
+        <ion-item routerLink="/proximamente">
+          <ion-icon name="lock-closed" slot="start"></ion-icon>
+          <ion-label>Política de Privacidad</ion-label>
+        </ion-item>
+        <ion-item routerLink="/login">
+          <ion-icon name="log-out" slot="start"></ion-icon>
+          <ion-label>Cerrar Sesión</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Bazar RadaL</ion-title>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <div class="ion-padding" style="margin-top: 50px; text-align: center;">
+      <h1>Bienvenido {{ username }} a bazar radal</h1>
+      <p>Explora nuestras ofertas exclusivas y encuentra los mejores productos.</p>
+      <!-- Botón "Empezar a Comprar" -->
+      <ion-button routerLink="/empezar-a-comprar" expand="full" color="primary">Empezar a Comprar</ion-button>
+      <div style="text-align: center;">
+        <img src="assets/imagen5.jpg" alt="Descripción de la imagen" style="max-width: 80%; max-height: 80%; padding-bottom: 20px;">
+      </div>
+      <ion-row>
+        <!-- Botón de ubicación -->
+        <ion-col size="12" size-md="6">
+          <ion-button expand="full" (click)="requestPermission()" color="primary" class="ion-text-capitalize">
+            Activa tu ubicación para facilitar la entrega
+          </ion-button>
+        </ion-col>
+  
+        <!-- Botón de seguimiento QR -->
+        <ion-col size="12" size-md="6" class="ion-text-end ion-text-center-md">
+          <ion-button (click)="addPhotoToGallery()" expand="full" color="primary" class="ion-text-capitalize">
+            Seguir pedido mediante QR
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-content>

@@ -1,0 +1,13 @@
+/* En tu archivo de estilos CSS */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .center-image {
+    max-width: 80%; /* O ajusta el tamaño según tus necesidades */
+    max-height: 80vh; /* O ajusta el tamaño según tus necesidades */
+  }
+  
